@@ -1,2 +1,2 @@
 # mangolo
-A password mangler written in Golang
+A WIP Golang rewrite of [The Password Stretcher](https://github.com/TheTechromancer/password-stretcher), a password mangler.
