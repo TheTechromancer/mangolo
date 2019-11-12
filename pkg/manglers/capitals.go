@@ -1,14 +1,14 @@
-package stretcher
+package manglers
 
 import (
     "unicode"
 )
 
 
-func Cap(in_chan <- chan []rune) <- chan []rune {
+func Capswap(in_chan <- chan []rune) <- chan []rune {
     // Essentially a generator
 
-    out_chan := make(chan []rune)
+    out_chan := make(chan []rune, 5)
 
     go func() {
         defer close(out_chan)
@@ -24,8 +24,9 @@ func Cap(in_chan <- chan []rune) <- chan []rune {
 
 
 func _cap(s []rune) <- chan []rune {
+    // Toggles all possible capital combinations
 
-    out_chan := make(chan []rune)
+    out_chan := make(chan []rune, 5)
 
     go func() {
         defer close(out_chan)
